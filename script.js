@@ -7,31 +7,43 @@ const btn6=document.getElementById('btn6');
 const btn7=document.getElementById('btn7');
 const plz=document.getElementById('plz');
 const dialogue = document.getElementById('dialogue');
+let yesClicked = false;
 
 
 const addPlease =()=>{
+    if (!yesClicked) {
     const pleaseTag = document.createElement('h2') 
     const textNode= document.createTextNode("Oops!! You won't able to say No");
     pleaseTag.appendChild(textNode);
     pleaseTag.classList.add('please-text');
     plz.appendChild(pleaseTag);
+    }
 }
 
 btn1.addEventListener('click',()=>{
+    yesClicked = true;
     dialogue.innerText='i  l❤️ve you toooo♥️♥️♥️♥️'
+    btn1.hidden=true;
     btn2.hidden=true;
     btn3.hidden=true; 
-    btn4.hidden=true; 
+    btn4.hidden=true;
+    btn5.hidden=true;
+    btn6.hidden=true;      
+    btn7.hidden=true;  
+    plz.innerHTML = '';
 })
 btn2.addEventListener('mouseover',()=>{
+    if (!yesClicked) {
     btn2.hidden=true;
     btn3.hidden=false;
     btn4.hidden=true;
     btn5.hidden=true;
     btn6.hidden=true;
     addPlease();
+    }
 })
 btn3.addEventListener('mouseover',()=>{
+    if (!yesClicked) {
     btn3.hidden=true;
     btn2.hidden=true;
     btn4.hidden=false; 
@@ -39,8 +51,10 @@ btn3.addEventListener('mouseover',()=>{
     btn6.hidden=true;
     btn2.hidden=true;
     addPlease();
+    }
 })
 btn4.addEventListener('mouseover',()=>{
+    if (!yesClicked) {
     btn4.hidden=true;
     btn5.hidden=false; 
     btn3.hidden=true;
@@ -48,8 +62,10 @@ btn4.addEventListener('mouseover',()=>{
     btn6.hidden=true;
     btn2.hidden=true;
     addPlease();
+    }
 })
 btn5.addEventListener('mouseover',()=>{
+    if (!yesClicked) {
     btn4.hidden=true;
     btn6.hidden=false; 
     btn3.hidden=true;
@@ -57,8 +73,10 @@ btn5.addEventListener('mouseover',()=>{
     btn5.hidden=true;
     btn2.hidden=true;
     addPlease();
+    }
 })
 btn6.addEventListener('mouseover',()=>{
+    if (!yesClicked) {
     btn4.hidden=true;
     btn7.hidden=false; 
     btn3.hidden=true;
@@ -66,8 +84,10 @@ btn6.addEventListener('mouseover',()=>{
     btn6.hidden=true;
     btn2.hidden=true;
     addPlease();
+    }
 })
 btn7.addEventListener('mouseover',()=>{
+    if (!yesClicked) {
     btn4.hidden=true;
     btn2.hidden=false; 
     btn3.hidden=true;
@@ -75,4 +95,5 @@ btn7.addEventListener('mouseover',()=>{
     btn6.hidden=true;
     btn7.hidden=true;
     addPlease();
+    }
 })
