@@ -94,7 +94,7 @@
 
 #dialogue {
     font-family: 'Lobster', cursive;
-    font-size: 2rem; /* Default size */
+    font-size: 2rem;
     text-align: center;
     position: absolute;
     top: 30%;
@@ -122,7 +122,6 @@
     color: white;
 }
 
-/* Keep button positions */
 #btn1 { position: absolute; top: 40%; left: 35%; }
 #btn2 { position: absolute; top: 40%; left: 55%; }
 #btn3 { position: absolute; top: 10%; left: 50%; }
@@ -138,15 +137,14 @@
 }
 
 .please-text {
-    font-size: 1.5rem; /* Default size */
+    font-size: 1.5rem;
     color: rgb(8, 7, 7);
     text-align: center;
 }
 
-/* Reduce text size for mobile */
 @media screen and (max-width: 480px) {
     .please-text {
-        font-size: 0.6rem;  /* Smaller size on mobile */
+        font-size: 0.6rem;
     }
 }
 
@@ -169,14 +167,14 @@
 /* For mobile phones (max-width: 480px) */
 @media screen and (max-width: 480px) {
     #dialogue {
-        font-size: 1.5rem;  /* Smaller text on mobile */
+        font-size: 1.5rem;
         top: 40%;
         left: 50%;
         transform: translateX(-50%);
     }
 
     .btn {
-        height: 35px;  /* Smaller buttons */
+        height: 35px;
         width: 90px;
         font-size: 12px;
     }
@@ -187,7 +185,6 @@
         left: 1%;
     }
 
-    /* Adjust button positions for smaller screens */
     #btn1 { top: 50%; left: 20%; }
     #btn2 { top: 50%; left: 55%; }
     #btn3 { top: 15%; left: 40%; }
